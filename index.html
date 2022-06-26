@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbarContainer">
+        <header class="navbar flex">
+            <h1>DojoWeather</h1>
+            <ul class="flex">
+                <li onclick="loadReport(this)" onmouseover="changeCursor(this)">Burbank</li>
+                <li onclick="loadReport(this)" onmouseover="changeCursor(this)">Chicago</li>
+                <li onclick="loadReport(this)" onmouseover="changeCursor(this)">Dallas</li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="cityBar flex">
+        <h2>San Jose</h2>
+        <div class="showTemp">
+            <label for="temp_select" id="temp_select_ID">show temperature in </label>
+            <select name="temp_select" id="temp_select" onchange="changeMetric(this)">
+                <option value="celsius">°C</option>
+                <option value="farhenheit">°F</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="forecast flex">
+        <div class="day">
+            <h3>Today</h3>
+            <div class="weather_byline">
+                <img src="./assets/some_rain.png" alt="some_rain" class="weather_pic">
+                <p class="weather_description">some rain</p>
+            </div>
+            <div class="temps flex">
+                <h4 id="temp1" class="temperature high">24°</h4>
+                <h4 id="temp2" class="temperature low">18°</h4>
+            </div>
+        </div>
+
+        <div class="day">
+            <h3>Tomorrow</h3>
+            <div class="weather_byline">
+                <img src="./assets/some_sun.png" alt="some_sun" class="weather_pic">
+                <p class="weather_description">some sun</p>
+            </div>
+            <div class="temps flex">
+                <h4 id="temp3" class="temperature high">27°</h4>
+                <h4 id="temp4" class="temperature low">19°</h4>
+            </div>
+        </div>
+
+        <div class="day">
+            <h3>Friday</h3>
+            <div class="weather_byline">
+                <img src="./assets/some_clouds.png" alt="some_clouds" class="weather_pic">
+                <p class="weather_description">some clouds</p>
+            </div>
+            <div class="temps flex">
+                <h4 id="temp5" class="temperature high">21°</h4>
+                <h4 id="temp6" class="temperature low">16°</h4>
+            </div>
+        </div>
+
+        <div class="day">
+            <h3>Saturday</h3>
+            <div class="weather_byline">
+                <img src="./assets/some_sun.png" alt="some_sun" class="weather_pic">
+                <p class="weather_description">some sun</p>
+            </div>
+            <div class="temps flex">
+                <h4 id="temp7" class="temperature high">26°</h4>
+                <h4 id="temp8" class="temperature low">21°</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookie flex">
+        <img src="./assets/cookie.png" alt="cookie">
+        <div>
+            <p>Stop! Cookie time</p>
+            <p>We use cookies (sadly no the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="">Read more...</a></p>
+        </div>
+        <button id="accept" onclick="deleteMessage()" onmouseover="changeCursor(this)">I Accept</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
