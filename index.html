@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Navbar container separate from header class to ensure background color across complete screen -->
     <div class="navbarContainer">
+
+
         <header class="navbar flex">
             <h1>DojoWeather</h1>
             <ul class="flex">
@@ -18,7 +22,9 @@
             </ul>
         </header>
     </div>
+    <!-- End of navbar -->
 
+    <!-- White bar above forecast boxes with input select on right side -->
     <div class="cityBar flex">
         <h2>San Jose</h2>
         <div class="showTemp">
@@ -29,8 +35,12 @@
             </select>
         </div>
     </div>
+    <!-- End of white bar -->
 
+    <!-- Container for all four days of forecast -->
     <div class="forecast flex">
+        
+        <!-- Day 1 -->
         <div class="day">
             <h3>Today</h3>
             <div class="weather_byline">
@@ -43,6 +53,7 @@
             </div>
         </div>
 
+        <!-- Day 2 -->
         <div class="day">
             <h3>Tomorrow</h3>
             <div class="weather_byline">
@@ -55,6 +66,7 @@
             </div>
         </div>
 
+        <!-- Day 3 -->
         <div class="day">
             <h3>Friday</h3>
             <div class="weather_byline">
@@ -67,6 +79,7 @@
             </div>
         </div>
 
+        <!-- Day 4 -->
         <div class="day">
             <h3>Saturday</h3>
             <div class="weather_byline">
@@ -79,7 +92,9 @@
             </div>
         </div>
     </div>
+    <!-- End of forecast container -->
 
+    <!-- Cookie with fixed position on bottom of screen -->
     <div class="cookie flex">
         <img src="./assets/cookie.png" alt="cookie">
         <div>
@@ -88,6 +103,7 @@
         </div>
         <button id="accept" onclick="deleteMessage()" onmouseover="changeCursor(this)">I Accept</button>
     </div>
+    <!-- End of cookie -->
 
     <script src="./script.js"></script>
 </body>
